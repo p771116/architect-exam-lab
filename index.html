@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="建築師考試 113 年與 97 年考古題自我測試" />
+  <title>建築師考古題｜自我測試</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="shell hero-inner">
+      <div>
+        <p class="eyebrow">ARCHITECT EXAM LAB · 第 5 堂課</p>
+        <h1>建築師考古題<br><em>自我測試</em></h1>
+        <p class="lede">把歷屆題目變成一輪輪可追蹤的練習。先作答，再看解析與官方題庫。</p>
+      </div>
+      <div class="hero-mark" aria-hidden="true"><span>▦</span><small>113 / 097</small></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="stats" aria-label="測驗摘要">
+      <div><strong id="questionCount">0</strong><span>可測驗題</span></div>
+      <div><strong id="answeredCount">0</strong><span>已作答</span></div>
+      <div><strong id="scoreValue">—</strong><span>目前得分</span></div>
+      <div><strong id="accuracyValue">—</strong><span>答對率</span></div>
+    </section>
+
+    <section class="toolbar">
+      <div class="filters">
+        <label>年度<select id="yearFilter"><option value="all">全部年度</option><option value="113">113 年</option><option value="97">97 年</option></select></label>
+        <label>科目<select id="subjectFilter"><option value="all">全部科目</option></select></label>
+        <label>模式<select id="modeFilter"><option value="all">全部題目</option><option value="unanswered">只看未作答</option><option value="wrong">只看錯題</option></select></label>
+      </div>
+      <button class="ghost" id="resetBtn">重設紀錄</button>
+    </section>
+
+    <section class="practice-layout">
+      <article class="quiz-card">
+        <div class="question-head"><span class="pill" id="questionMeta">載入中</span><span id="progressText">0 / 0</span></div>
+        <div class="progress"><span id="progressBar"></span></div>
+        <p class="question" id="questionText">正在載入題目…</p>
+        <div class="options" id="options"></div>
+        <div class="feedback" id="feedback" hidden></div>
+        <div class="actions"><button class="primary" id="checkBtn">送出答案</button><button class="secondary" id="nextBtn" disabled>下一題 →</button></div>
+      </article>
+
+      <aside class="side-card">
+        <p class="eyebrow">SOURCE DESK</p>
+        <h2>官方題庫</h2>
+        <p>完整題目、答案與申論／設計題，請回到考選部原始檔案核對。</p>
+        <div id="sourceLinks" class="source-links"></div>
+        <div class="note"><strong>使用提醒</strong><br />選擇題可自動判分；申論與設計科目依考選部資料未提供標準答案，請以 PDF 自行練習。</div>
+      </aside>
+    </section>
+
+    <section class="manual-section">
+      <div><p class="eyebrow">MANUAL PRACTICE</p><h2>97 年申論與設計題</h2><p>適合計時、畫圖、寫作後，再對照官方試題檢核。</p></div>
+      <div class="manual-grid" id="manualLinks"></div>
+    </section>
+  </main>
+  <footer><div class="shell">資料來源：中華民國考選部歷年考畢試題查詢平台 · 本頁為學習工具</div></footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
+
